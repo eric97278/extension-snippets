@@ -1,0 +1,192 @@
+/* Style général pour la page */
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #f4f4f9;
+   color: #333;
+   padding: 20px;
+   margin: 0;
+   width: 320px;
+   box-sizing: border-box;
+}
+
+/* Style du titre principal */
+h1 {
+   font-size: 22px;
+   color: #444;
+   margin-bottom: 15px;
+   text-align: center;
+}
+
+/* Style des onglets pour basculer entre les sections */
+.tabs {
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 15px;
+}
+
+.tab-button {
+   flex: 1;
+   padding: 10px;
+   background-color: #e9ecef;
+   border: 1px solid #ddd;
+   border-bottom: none;
+   cursor: pointer;
+   text-align: center;
+   font-size: 14px;
+   border-radius: 5px 5px 0 0;
+   transition: background-color 0.3s ease;
+}
+
+/* Ajout d'un espace entre les boutons d'onglets */
+.tab-button:not(:last-child) {
+   margin-right: 2px;
+}
+
+/* Style pour l'onglet actif */
+.tab-button.active {
+   background-color: #fff;
+   border-bottom: 2px solid #007bff;
+   color: #007bff;
+   font-weight: bold;
+}
+
+/* Style du contenu des onglets, par défaut masqué */
+.tab-content {
+   display: none;
+   background-color: #fff;
+   padding: 15px;
+   border-radius: 0 0 10px 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Affichage du contenu de l'onglet actif */
+.tab-content.active {
+   display: block;
+}
+
+/* Style du formulaire d'ajout de snippet */
+form {
+   background-color: #fff;
+   padding: 15px;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+}
+
+/* Style des champs de saisie dans le formulaire */
+input,
+textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-sizing: border-box;
+   font-size: 14px;
+}
+
+/* Permet au champ de texte de s'étendre verticalement */
+textarea {
+   resize: vertical;
+   min-height: 80px;
+}
+
+/* Style des boutons principaux */
+button {
+   width: 100%;
+   padding: 10px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur au survol des boutons */
+button:hover {
+   background-color: #0056b3;
+}
+
+/* Section de filtrage par tag */
+#filter-section {
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Style de la liste déroulante pour le filtrage */
+#tag-filter {
+   padding: 10px;
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   background-color: #fff;
+   font-size: 14px;
+}
+
+/* Liste des snippets */
+#snippets-list {
+   margin-top: 20px;
+}
+
+/* Style de chaque snippet */
+.snippet {
+   background-color: #fff;
+   padding: 15px;
+   margin-bottom: 15px;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-left: 4px solid #007bff;
+}
+
+/* Mise en forme du nom du snippet */
+.snippet strong {
+   font-size: 16px;
+   color: #333;
+}
+
+/* Style du contenu du snippet */
+.snippet pre {
+   background-color: #f8f8f8;
+   padding: 10px;
+   border-radius: 5px;
+   overflow-x: auto;
+   margin: 10px 0;
+   white-space: pre-wrap;
+}
+
+/* Affichage des tags du snippet */
+.snippet small {
+   display: block;
+   color: #888;
+   margin-bottom: 10px;
+}
+
+/* Style des boutons de modification et de suppression */
+button.edit,
+button.delete {
+   padding: 8px;
+   font-size: 14px;
+   width: calc(50% - 5px);
+}
+
+/* Bouton de modification en vert */
+button.edit {
+   background-color: #28a745;
+   margin-right: 10px;
+}
+
+button.edit:hover {
+   background-color: #218838;
+}
+
+/* Bouton de suppression en rouge */
+button.delete {
+   background-color: #dc3545;
+}
+
+button.delete:hover {
+   background-color: #c82333;
+}

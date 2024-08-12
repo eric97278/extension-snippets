@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>DevBoost Snippet Manager</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="popup.js" defer></script>
+</head>
+
+<body>
+   <h1>Snippets Manager</h1>
+
+   <!-- Onglets pour naviguer entre l'ajout et la gestion des snippets -->
+   <div class="tabs">
+      <button class="tab-button active" data-tab="add-snippet">Ajouter un Snippet</button>
+      <button class="tab-button" data-tab="manage-snippets">Gérer les Snippets</button>
+   </div>
+
+   <!-- Section pour ajouter un nouveau snippet -->
+   <div id="add-snippet" class="tab-content active">
+      <form id="snippet-form">
+         <input type="text" id="snippet-name" placeholder="Nom du snippet" required>
+         <textarea id="snippet-content" placeholder="Contenu du snippet" required></textarea>
+         <input type="text" id="snippet-tags" placeholder="Tags (séparés par des virgules)">
+         <button type="submit">Ajouter</button>
+      </form>
+   </div>
+
+   <!-- Section pour gérer les snippets existants -->
+   <div id="manage-snippets" class="tab-content">
+      <div id="filter-section">
+         <label for="tag-filter">Filtrer par tag:</label>
+         <select id="tag-filter">
+            <option value="">Tous les tags</option>
+         </select>
+      </div>
+      <div id="snippets-list"></div>
+   </div>
+
+</body>
+
+</html>
